@@ -1,0 +1,68 @@
+body, html{     
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+}
+
+canvas{
+    border: 1px solid black;
+    background-image: url(bg.gif);
+    margin-top: calc(50vh - 250px);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    overflow: clip;
+    background-color: black;
+}
+
+#left{
+    background-color: gray;
+    font-size: xx-large;
+    display: grid;
+    place-items: center;
+    height: 25vw;
+    width: 25%;
+    
+    margin: 0;
+}
+
+#right{
+    background-color: rgb(204, 204, 204);
+    font-size: xx-large;
+    display: grid;
+    place-items: center;
+    height: 25vw;
+    width: 25%;
+    margin: 0;
+    float: right;
+}
+
+#flex{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0vw;
+}
+
+@media only screen and (min-width: 777px){
+    #left, #right, #flex{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 776px){
+    #left, #right{
+        display: grid;
+    }
+    #flex{
+        display: flex;
+    }
+}
